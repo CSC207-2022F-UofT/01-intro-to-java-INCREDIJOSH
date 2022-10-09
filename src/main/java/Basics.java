@@ -7,6 +7,8 @@
  * relevant readings for each task.
  */
 
+import java.lang.reflect.Array;
+
 /**
  *  1. In Java, no code can exist outside of a class. Unlike Python which uses
  *    functions, all code in Java uses methods.
@@ -43,6 +45,7 @@ public class Basics {
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
+        System.out.println("Hello World!");
 
 
 
@@ -62,6 +65,7 @@ public class Basics {
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
+        int my_variable = 180;
 
 
 
@@ -99,6 +103,9 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
+        for (int i = 10; i >= 0; i--) {
+            System.out.println("current count: " + i);
+        }
 
 
     }
@@ -143,7 +150,10 @@ public class Basics {
         StringBuilder ret = new StringBuilder();
 
         // Fill in the rest of the body here
-
+        String[] sep = to_split.split(" ");
+        for (int i = 0; i <= 7; i++) {
+            ret.append(sep[i].charAt(0));
+        }
         return ret.toString();
     }
 
@@ -170,6 +180,18 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
+        int len = arr.length;
+        if (len == 0 || len == 1) {
+            return 0;
+        } else {
+            for (int i = 1; i <= len; i += 2) {
+                current_sum += arr[i];
+            }
+        }
+        {
+
+        }
+
 
         return current_sum;
     }

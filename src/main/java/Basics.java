@@ -106,9 +106,8 @@ public class Basics {
         for (int i = 10; i >= 0; i--) {
             System.out.println("Current count: " + i);
         }
+        }
 
-
-    }
 
     /**
      *  6. Below is a method named split which returns a String,
@@ -151,7 +150,7 @@ public class Basics {
 
         // Fill in the rest of the body here
         String[] sep = to_split.split("\\s+");
-        for (int i = 0; i <= 7; i++) {
+        for (int i = 0; i <= 6; i++) {
             ret.append(sep[i].charAt(0));
         }
         return ret.toString();
@@ -184,7 +183,7 @@ public class Basics {
         if (len == 0 || len == 1) {
             return 0;
         } else {
-            for (int i = 1; i <= len; i += 2) {
+            for (int i = 1; i <= len - 1; i += 2) {
                 current_sum += arr[i];
             }
         }
